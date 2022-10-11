@@ -76,7 +76,7 @@ class RelaxView extends StatelessWidget {
               SlideTransition(
                 position: _relaxAnimation,
                 child: Text(
-                  "Relax",
+                  "Dê nome a suas emoções",
                   style: TextStyle(fontSize: 26.0, fontWeight: FontWeight.bold),
                 ),
               ),
@@ -86,7 +86,7 @@ class RelaxView extends StatelessWidget {
                   padding:
                       EdgeInsets.only(left: 64, right: 64, top: 16, bottom: 16),
                   child: Text(
-                    "Lorem ipsum dolor sit amet,consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore",
+                    "“sinto a ansiedade batendo... Essa voz do impostor, é um bagulho que mexe, ta ligado? ”\nO passo número um é conhecer a si mesmo, identificando as suas próprias emoções e sentimentos. \nPara tanto, procure se lembrar de situações passadas e da forma que você reagiu em cada um delas. \nIsso vai ajudar a reconhecer os gatilhos e os padrões de comportamento.",
                     textAlign: TextAlign.center,
                   ),
                 ),
