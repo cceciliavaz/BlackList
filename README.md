@@ -3,9 +3,9 @@
 Projeto destinado a composição da nota da aula de MOBILE ENGINEERING do MBA de Engenharia de Software da FIAP turma 87AOJ
 
 Integrantes:
-Ana Cecília Vaz da Silva
-Fábio Salge Figueira
-Fernando Henrique Polo
+Ana Cecília Vaz da Silva - 
+Fábio Salge Figueira - 
+Fernando Henrique Polo - 
 Guilherme Gatto
 
 ## Getting Started
