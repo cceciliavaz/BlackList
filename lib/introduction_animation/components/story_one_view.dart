@@ -1,9 +1,15 @@
 import 'package:flutter/material.dart';
 
-class RelaxView extends StatelessWidget {
-  final AnimationController animationController;
+import '../../model/learned-lessons.dart';
 
-  const RelaxView({Key? key, required this.animationController})
+class StoryOneView extends StatelessWidget {
+  final AnimationController animationController;
+  final LearnedLessons learnedLessons;
+
+  const StoryOneView(
+      {Key? key,
+      required this.animationController,
+      required this.learnedLessons})
       : super(key: key);
 
   @override
@@ -76,7 +82,7 @@ class RelaxView extends StatelessWidget {
               SlideTransition(
                 position: _relaxAnimation,
                 child: Text(
-                  "Dê nome a suas emoções",
+                  learnedLessons.title,
                   style: TextStyle(fontSize: 26.0, fontWeight: FontWeight.bold),
                 ),
               ),
@@ -85,10 +91,12 @@ class RelaxView extends StatelessWidget {
                 child: Padding(
                   padding:
                       EdgeInsets.only(left: 64, right: 64, top: 16, bottom: 16),
-                  child: Text(
-                    "“sinto a ansiedade batendo... Essa voz do impostor, é um bagulho que mexe, ta ligado? ”\nO passo número um é conhecer a si mesmo, identificando as suas próprias emoções e sentimentos. \nPara tanto, procure se lembrar de situações passadas e da forma que você reagiu em cada um delas. \nIsso vai ajudar a reconhecer os gatilhos e os padrões de comportamento.",
-                    textAlign: TextAlign.center,
-                  ),
+                  child: Column(children: [
+                    Text(learnedLessons.quote,
+                        textAlign: TextAlign.center,
+                        style: TextStyle(fontStyle: FontStyle.italic)),
+                    Text(learnedLessons.message, textAlign: TextAlign.left),
+                  ]),
                 ),
               ),
               SlideTransition(
@@ -96,7 +104,7 @@ class RelaxView extends StatelessWidget {
                 child: Container(
                   constraints: BoxConstraints(maxWidth: 350, maxHeight: 250),
                   child: Image.asset(
-                    'assets/introduction_animation/relax_image.png',
+                    learnedLessons.image,
                     fit: BoxFit.contain,
                   ),
                 ),

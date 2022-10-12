@@ -56,7 +56,7 @@ class WelcomeView extends StatelessWidget {
       child: SlideTransition(
         position: _secondHalfAnimation,
         child: Padding(
-          padding: const EdgeInsets.only(bottom: 100),
+          padding: const EdgeInsets.only(bottom: 200),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -73,15 +73,15 @@ class WelcomeView extends StatelessWidget {
               SlideTransition(
                 position: _welcomeFirstHalfAnimation,
                 child: Text(
-                  "Welcome",
+                  "Curtiu?",
                   style: TextStyle(fontSize: 25.0, fontWeight: FontWeight.bold),
                 ),
               ),
               Padding(
                 padding:
-                    EdgeInsets.only(left: 64, right: 64, top: 16, bottom: 16),
+                    EdgeInsets.only(left: 80, right: 80, top: 20, bottom: 20),
                 child: Text(
-                  "Stay organised and live stress-free with you-do app",
+                  "História de um estágiario",
                   textAlign: TextAlign.center,
                 ),
               ),

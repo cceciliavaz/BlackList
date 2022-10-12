@@ -1,14 +1,22 @@
-import 'package:best_flutter_ui_templates/introduction_animation/components/care_view.dart';
-import 'package:best_flutter_ui_templates/introduction_animation/components/center_next_button.dart';
-import 'package:best_flutter_ui_templates/introduction_animation/components/mood_diary_vew.dart';
-import 'package:best_flutter_ui_templates/introduction_animation/components/relax_view.dart';
-import 'package:best_flutter_ui_templates/introduction_animation/components/splash_view.dart';
+import 'package:best_flutter_ui_templates/introduction_animation/components/story_two_view.dart';
+import 'package:best_flutter_ui_templates/introduction_animation/components/story_four_view.dart';
+import 'package:best_flutter_ui_templates/introduction_animation/components/story_three_view.dart';
+import 'package:best_flutter_ui_templates/introduction_animation/components/story_one_view.dart';
+import 'package:best_flutter_ui_templates/introduction_animation/components/story_view.dart';
 import 'package:best_flutter_ui_templates/introduction_animation/components/top_back_skip_view.dart';
 import 'package:best_flutter_ui_templates/introduction_animation/components/welcome_view.dart';
 import 'package:flutter/material.dart';
 
+import '../model/learned-lessons.dart';
+import '../model/story.dart';
+
 class IntroductionAnimationScreen extends StatefulWidget {
-  const IntroductionAnimationScreen({Key? key}) : super(key: key);
+  final Story story;
+  final List<LearnedLessons> learnedLessons_;
+
+  const IntroductionAnimationScreen(
+      {Key? key, required this.story, required this.learnedLessons_})
+      : super(key: key);
 
   @override
   _IntroductionAnimationScreenState createState() =>
@@ -41,18 +49,19 @@ class _IntroductionAnimationScreenState
       body: ClipRect(
         child: Stack(
           children: [
-            SplashView(
+            StoryView(
               animationController: _animationController!,
+              story: widget.story,
             ),
-            RelaxView(
-              animationController: _animationController!,
-            ),
-            CareView(
-              animationController: _animationController!,
-            ),
-            MoodDiaryVew(
-              animationController: _animationController!,
-            ),
+            StoryOneView(
+                animationController: _animationController!,
+                learnedLessons: widget.learnedLessons_[0]),
+            StoryTwoView(
+                animationController: _animationController!,
+                learnedLessons: widget.learnedLessons_[1]),
+            StoryThreeView(
+                animationController: _animationController!,
+                learnedLessons: widget.learnedLessons_[2]),
             WelcomeView(
               animationController: _animationController!,
             ),
