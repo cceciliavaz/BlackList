@@ -1,16 +1,19 @@
-# best_flutter_ui_templates
+# BlackList
 
-A new Flutter project.
+Projeto destinado a composição da nota da aula de MOBILE ENGINEERING do MBA de Engenharia de Software da FIAP turma 87AOJ
+
+Integrantes:
+Ana Cecília Vaz da Silva
+Fábio Salge Figueira
+Fernando Henrique Polo
+Guilherme Gatto
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+SDK Utilizado para rodar o projeto:
+ sdk: ">=2.17.5 <3.0.0"
 
-A few resources to get you started if this is your first Flutter project:
+A primeira versão deste projeto foi composta por recursos já nativos do flutter, de tal maneira para rodar só é necessário executar o comando:
+flutter run
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+(Foi utilizado emuladores android para o teste do app).
